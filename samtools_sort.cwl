@@ -9,16 +9,17 @@ baseCommand:
 inputs:
   - id: alignment
     type: File
-    inputBinding: 0
+    inputBinding:
+      position: 0
 
 outputs:
   - id: sorted_alignment
     type: File
     outputBinding:
-      glob:sorted_alignment.bam
+      glob: sorted_alignment.bam
 
 stdout: sorted_alignment.bam
 
 requirements:
   - class: DockerRequirement
-    dockerPull: biocontainers/samtools
+    dockerPull: dz1998/variant_calling:samtools

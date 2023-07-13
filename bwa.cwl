@@ -10,10 +10,10 @@ inputs:
     type: 'File[]'
     inputBinding:
       position: 1
-  - id: reference:
+  - id: reference
     type: File
     inputBinding:
-      position:0
+      position: 0
     secondaryFiles:
       - .amb
       - .ann
@@ -28,5 +28,5 @@ outputs:
 
 requirements:
   - class: DockerRequirement
-    dockerPull: quay.io/biocontainers/bwa:0.7.8--hed695b0_5
+    dockerPull: dz1998/variant_calling:bwa
 stdout: output.bam
